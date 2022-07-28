@@ -1,0 +1,118 @@
+:root{
+    --Light-Cyan: hsl(193, 38%, 86%);
+    --Neon-Green: hsl(150, 100%, 66%);
+    --Grayish-Blue: hsl(217, 19%, 38%);
+    --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+    --Dark-Blue: hsl(218, 23%, 16%);
+}
+/* GLOBAL SETTINGS */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+    font-family: 'Manrope', sans-serif;
+}
+
+/* GENERAL PORPOSE */
+body {
+    font-size: 2rem;
+    background-color: var(--Dark-Blue);
+    
+}
+
+.advice-container{
+    display:grid;
+    place-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.advice-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 250px;
+    width: 400px;
+    padding: 20px;
+    background-color: var(--Dark-Grayish-Blue);
+    border-radius: 20px;
+}
+
+.advice-title{
+    font-size: 1.2rem;
+    color: var(--Neon-Green);
+    font-weight: 500;
+    letter-spacing: 0.5rem;
+}
+
+.advice-description{
+    font-size: 2rem;
+    width: 90%;
+    text-align: center;
+    color: var(--Light-Cyan);
+    font-weight: 800;
+}
+
+
+.advice-divider{
+    background-image: url("/images/pattern-divider-desktop.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 13px;
+    width: 90%;
+
+}
+
+.advice-icon{
+    background-color: var(--Neon-Green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: 250px;
+    cursor: pointer;
+
+}
+.advice-icon:hover{
+    background-color: var(--Neon-Green);
+    filter: drop-shadow(0px 0px 10px #51ffa8) contrast(1) brightness(1);
+}
+
+.advice-icon img{
+    width: 40%;
+    height: 40%;
+}
+
+
+
+@media screen and (max-width: 750px) {
+    .advice-content{
+        width: 350px;
+        height: 350px;
+    }
+    .advice-description{
+        width: 80%;
+    
+    }
+    .advice-divider{
+        background-image: url("/images/pattern-divider-mobile.svg");
+        height: 15px;
+        width: 90%;
+    
+    }
+    .advice-icon{
+        width: 60px;
+        height: 60px;
+        margin-top: 350px;
+    }
+
+
+}
